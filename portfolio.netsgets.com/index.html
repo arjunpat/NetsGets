@@ -1,136 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-		ga('create', 'UA-101186135-1', 'auto');
-		ga('send', 'pageview');
-
-	</script>
-
-</script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>404 - NetsGets Websites</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href='css/family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800.css' rel='stylesheet' type='text/css'>
-    <link href='css/family=Merriweather:40t0,300,300italic,400italic,700,700italic,900,900italic.css' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Theme CSS -->
-    <link href="css/creative.min.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <head>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-101186135-1', 'auto');
+            ga('send', 'pageview');
+            
+        </script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>NetsGets Websites</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='css/family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800.css' rel='stylesheet' type='text/css'>
+        <link href='css/family=Merriweather:40t0,300,300italic,400italic,700,700italic,900,900italic.css' rel='stylesheet' type='text/css'>
+        <!-- Plugin CSS -->
+        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <!-- Theme CSS -->
+        <link href="css/creative.min.css" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-    <!--Favicon Below -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
-
-</head>
-
-<body id="page-top">
-
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <div style="display: inline;">
-                    <img style="float: left; vertical-align: middle; display: inline-block; margin-top: 5%;" src="img/faviconLogo.png"></img>
-                    <a class="navbar-brand page-scroll" style="text-transform: initial;color: #F05F40" href="#page-top">&nbsp; NetsGets Websites</a>
+        <![endif]-->
+        <!--Favicon Below -->
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+        <!-- Extra CSS for the table -->
+        <style>
+            table {
+            border-collapse: collapse;
+            width: 100%;
+            }
+            th, td {
+            text-align: left;
+            padding: 8px;
+            }
+            tr:nth-child(even){background-color: #f2f2f2}
+            th {
+            background-color: #F05F40;
+            color: white;
+            }
+        </style>
+        <!-- Extra JS for the table -->
+        <script>
+            function sortTable(n) {
+                var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+                table = document.getElementById("myTable");
+                switching = true;
+                //Set the sorting direction to ascending:
+                dir = "asc";
+                /*Make a loop that will continue until
+                no switching has been done:*/
+                while (switching) {
+                    //start by saying: no switching is done:
+                    switching = false;
+                    rows = table.getElementsByTagName("TR");
+                    /*Loop through all table rows (except the
+                    first, which contains table headers):*/
+                    for (i = 1; i < (rows.length - 1); i++) {
+                        //start by saying there should be no switching:
+                        shouldSwitch = false;
+                        /*Get the two elements you want to compare,
+                        one from current row and one from the next:*/
+                        x = rows[i].getElementsByTagName("TD")[n];
+                        y = rows[i + 1].getElementsByTagName("TD")[n];
+                        /*check if the two rows should switch place,
+                        based on the direction, asc or desc:*/
+                        if (dir == "asc") {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                //if so, mark as a switch and break the loop:
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else if (dir == "desc") {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                //if so, mark as a switch and break the loop:
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (shouldSwitch) {
+                        /*If a switch has been marked, make the switch
+                        and mark that a switch has been done:*/
+                        rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                        switching = true;
+                        //Each time a switch is done, increase this count by 1:
+                        switchcount++;
+                    } else {
+                        /*If no switching has been done AND the direction is "asc",
+                        set the direction to "desc" and run the while loop again.*/
+                        if (switchcount == 0 && dir == "asc") {
+                            dir = "desc";
+                            switching = true;
+                        }
+                    }
+                }
+            }        
+        </script>
+    </head>
+    <body id="page-top">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <div style="display: inline;">
+                        <img style="float: left; vertical-align: middle; display: inline-block; margin-top: 5%;" src="img/faviconLogo.png"></img>
+                        <a class="navbar-brand page-scroll" style="text-transform: initial;color: #F05F40;" href="#page-top">&nbsp; NetsGets Websites</a>
+                    </div>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        
+        <header style="background-image:url(img/404Background.jpg); margin-top: -5%; margin-bottom: -5%;">
+            <div class="header-content">
+                <div class="header-content-inner">
+                    <h1 id="homeHeading" style="text-transform: initial;color: black">Our Portfolio</h1>
+                    <h2 id="homeHeading" style="text-transform: initial;color: black">To access any of the projects we have worked on, go the link of the corresponding project.</h2>
+                    <br>
+                    <br>
+                    <table style="width:100%; color: black; align-content: left" id="myTable">
+                        <tr>
+                            <th onclick="sortTable(0)" onload="sortTable(0)">Projects</th>
+                            <th onclick="sortTable(1)">Link</th>
+                        </tr>
+                        <tr>
+                            <td>NetsGets</td>
+                            <td><a href="https://www.netsgets.com" target="_blank">www.netsgets.com</a></td>
+                        </tr>
+                        <tr>
+                            <td>Apprente</td>
+                            <td><a href="https://portfolio.netsgets.com/apprente" target="_blank">portfolio.netsgets.com/apprente</a></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+        </header>
 
-    <header style="background-image:url(img/404Background.jpg); margin-top: -5%; margin-bottom: -5%">
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1 id="homeHeading" style="text-transform: initial;color: #F05F40">Oops!</h1>
-                <h2 id="homeHeading" style="text-transform: initial;color: #F05F40">Looks like this webpage doesn't exist.</h2>
-                <p style="color: #F05F40">It's possible that the webpage has been removed.</p>
-                <br>
-                <a href="https://www.netsgets.com" class="btn btn-primary btn-xl page-scroll">Back To NetsGets.com</a>
+        <!-- ONE CHANGE TO FOOTER HAS TO BE MOVED TO ALL OTHER FILES -->
+        <footer style="background-color: #f1f1f1; padding-bottom: 5%">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="copyright sr-footer" style="color: grey; font-weight: bold;">Our Work</span>
+                        <br>
+                        <span class="copyright sr-footer" style="color: grey;;"><a herf="https://portfolio.netsgets.com">portfolio.netsgets.com</a></span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="copyright sr-footer" style="color: grey; font-weight: bold;">NetsGets</span>
+                        <br>
+                        <span class="copyright sr-footer" style="color: grey;"><a href="https://www.netsgets.com">www.netsgets.com</a></span>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="copyright sr-footer" style="color: grey; font-weight: bold;">Projects</span>
+                        <br>
+                        <span class="copyright sr-footer" style="color: grey;"><a href="https://dating.netsgets.com">dating.netsgets.com</a></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="copyright sr-footer" style="color: grey"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <hr class="sr-footer" style="border-color: #bfbfbf; max-width: 250px">
+                    </div>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="copyright sr-footer" style="color: grey">Copyright &copy; 2017 NetsGets, Inc. All rights reserved.</span>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline quicklinks">
+                            <li><a href="#"></a>
+                            </li>
+                            <li><a href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 sr-footer">
+                        <ul class="list-inline social-buttons">
+                            <li><a target="_blank" href="#"><i class="fa fa-twitter sr-footer"></i></a>
+                            </li>
+                            <li><a target="_blank" href="https://www.facebook.com/NetsGets"><i class="fa fa-facebook sr-footer"></i></a>
+                            </li>
+                            <li><a target="_blank" href="https://www.linkedin.com/company-beta/18114665"><i class="fa fa-linkedin sr-footer"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </header>
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright sr-footer">Copyright &copy; 2017 NetsGets, Inc</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#"></a>
-                        </li>
-                        <li><a href="#"></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a target="_blank" href="#"><i class="fa fa-twitter sr-footer"></i></a>
-                        </li>
-                        <li><a target="_blank" href="https://www.facebook.com/NetsGets"><i class="fa fa-facebook sr-footer"></i></a>
-                        </li>
-                        <li><a target="_blank" href="https://www.linkedin.com/company-beta/18114665"><i class="fa fa-linkedin sr-footer"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-
-
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-
-
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-
-
-    <!-- Theme JavaScript -->
-    <script src="js/creative.min.js"></script>
-
-
-
-</body>
-
+        <!-- jQuery -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="js/jquery.easing.min.js"></script>
+        <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <!-- Theme JavaScript -->
+        <script src="js/creative.min.js"></script>
+    </body>
 </html>
-
-
