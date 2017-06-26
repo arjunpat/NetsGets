@@ -10,12 +10,12 @@ a {
   -moz-transition: all .35s
 }
 
-header, /*
+header,
 header .header-content {
   position: relative;
   width: 100%;
   text-align: center;
-}*/
+}
 
 body,
 html {
